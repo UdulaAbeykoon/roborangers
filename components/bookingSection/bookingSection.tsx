@@ -9,8 +9,7 @@ export function BookingSection() {
       <div className="max-w-6xl mx-auto">
         <div className="bg-colorSecondaryHalfDark rounded-xl p-8 shadow-xl text-center mb-12">
           <h2 className="text-4xl font-bold mb-6 text-colorLight">Ready to Join the Fun?</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto text-colorSecondaryLight">
-            Spaces fill up quickly for our summer sessions. Secure your child's spot today and remember - the first class is completely FREE!
+          <p className="text-xl mb-8 max-w-3xl mx-auto text-colorSecondaryLight">            Spaces fill up quickly for our summer sessions. Secure your child&apos;s spot today and remember - the first class is completely FREE!
           </p>
             <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
             <div className="bg-colorPrimary/30 rounded-lg p-6 text-center">

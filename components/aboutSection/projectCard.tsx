@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 type ProjectCardProps = {
   imgSrc: string;
@@ -19,11 +20,12 @@ export default function ProjectCard({ imgSrc }: ProjectCardProps) {
       </div>
       <p className="mt-[1em] text-[0.8em]  tracking-tight  max-md:max-w-full  ">
         “{testimonial}”
-      </p>*/}
-      <img
+      </p>*/}      <Image
         src={imgSrc}
-        alt=""
-        className="relative z-10 h-full w-full rounded-[0rem]"
+        alt="Project image"
+        width={800}
+        height={450}
+        className="relative z-10 h-full w-full rounded-[0rem] object-cover"
       />
       <div className="mask absolute left-0 top-0 -z-10 h-full w-full bg-colorSecondaryLight opacity-80"></div>
     </article>

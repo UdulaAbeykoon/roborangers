@@ -60,8 +60,7 @@ export default function PricingPage() {
             <h2 className="text-3xl font-bold mb-6">Frequently Asked Questions</h2>
             
             <div className="space-y-6">
-              <div>
-                <h3 className="text-xl font-bold mb-2">What's included in the price?</h3>
+              <div>                <h3 className="text-xl font-bold mb-2">What&apos;s included in the price?</h3>
                 <p>Each class includes all necessary materials, equipment usage, and expert instruction from our qualified STEM educators.</p>
               </div>
               <div>
