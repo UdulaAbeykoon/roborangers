@@ -6,20 +6,23 @@ export function Footer({ className }: { className?: string }) {
   const [currentTime, setCurrentTime] = useState("");
 
   useEffect(() => {
-    const options: Intl.DateTimeFormatOptions[] = [
-      { month: "short", day: "numeric" },
-      { hour: "numeric", minute: "numeric" },
-    ];
+    // Make sure we're on the client side before attempting to use Date objects
+    if (typeof window !== 'undefined') {
+      const options: Intl.DateTimeFormatOptions[] = [
+        { month: "short", day: "numeric" },
+        { hour: "numeric", minute: "numeric" },
+      ];
 
-    setCurrentTime(getJoinedDate(options));
-
-    const interval = setInterval(() => {
       setCurrentTime(getJoinedDate(options));
-    }, 1000);
 
-    return () => {
-      clearInterval(interval);
-    };
+      const interval = setInterval(() => {
+        setCurrentTime(getJoinedDate(options));
+      }, 1000);
+
+      return () => {
+        clearInterval(interval);
+      };
+    }
   }, []);
 
   return (

@@ -38,13 +38,23 @@ export const shuffle = (array: any[]) => {
 };
 
 export const isDesktop = () => {
-  return screen.width > 540;
+  // Check if window is defined (client-side) before accessing screen
+  if (typeof window !== 'undefined') {
+    return window.innerWidth > 540;
+  }
+  // Default to false for server-side rendering
+  return false;
 };
 
 export function getJoinedDate(
   options: Intl.DateTimeFormatOptions[],
   separator: string = " | ",
 ) {
+  // Ensure we're on client-side before using Date
+  if (typeof window === 'undefined') {
+    return '';
+  }
+  
   function format(option: Intl.DateTimeFormatOptions) {
     let formatter = new Intl.DateTimeFormat("en", option);
     return formatter.format(new Date());

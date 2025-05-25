@@ -19,14 +19,15 @@ export function HeaderNavigation() {
   const ease = CustomEase.create("custom", "M0,0 C0.52,0.01 0.16,1 1,1 ");
 
   const headerAnimation = useRef<gsap.core.Timeline | null>(null);
-
   useEffect(() => {
     const flexHeight = isDesktop() ? "20vh" : "7vh";
-    headerAnimation.current = gsap
-      .timeline()
-      .set("#headerNavigation", {
-        display: "flex",
-      })
+    // Ensure we're on client side before using GSAP
+    if (typeof window !== 'undefined') {
+      headerAnimation.current = gsap
+        .timeline()
+        .set("#headerNavigation", {
+          display: "flex",
+        })
       .to("#headerNavigation", {
         duration: 1,
         y: "0%",
@@ -56,20 +57,20 @@ export function HeaderNavigation() {
           ease,
         },
         "-=1.2",
-      );
-
-    return () => {
+      );    return () => {
       headerAnimation.current?.kill();
     };
   }, []);
 
   useEffect(() => {
-    if (isMenuOpen) {
-      headerAnimation.current?.play();
-    } else {
-      headerAnimation.current?.reverse();
+    if (typeof window !== 'undefined' && headerAnimation.current) {
+      if (isMenuOpen) {
+        headerAnimation.current.play();
+      } else {
+        headerAnimation.current.reverse();
+      }
     }
-  }, [isMenuOpen]);  const headerData = [
+  }, [isMenuOpen]);const headerData = [
     {
       name: "Home",
       href: links.home,
