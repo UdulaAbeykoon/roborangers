@@ -29,27 +29,11 @@ export function Footer({ className }: { className?: string }) {
         className,
       )}
     >
-      <FooterGroup
-        className="hidden md:block"
-        title="COPYRIGHT"
-        links={[{ href: "", text: "Copyright © 2024." }]}
-      />
+      
       <FooterGroup
         title="LOCAL TIME"
         className="hidden md:block"
         links={[{ href: "", text: currentTime }]}
-      />
-
-      <FooterGroup
-        title="SOCIALS"
-        className="md:ml-auto"
-        isMagnetic={true}
-        links={[
-          { href: links.email, text: "Email" },
-          { href: links.twitter, text: "Twitter" },
-          { href: links.telegram, text: "Telegram" },
-          { href: links.github, text: "Github" },
-        ]}
       />
     </footer>
   );
