@@ -12,6 +12,8 @@ interface MagenticProps {
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
   onClick?: () => void;
+  target?: string;
+  rel?: string;
   scrambleParams?:
     | {
         text: string;
@@ -33,6 +35,8 @@ const Magentic = ({
   onMouseEnter,
   onMouseLeave,
   onClick,
+  target,
+  rel,
   scrambleParams,
   hoverUnderline = false,
   strength = 100,
@@ -174,6 +178,8 @@ const Magentic = ({
       return (
         <a 
           href={href}
+          target={target}
+          rel={rel}
           ref={magnet as React.RefObject<HTMLAnchorElement>} 
           {...sharedProps}
         >
@@ -185,6 +191,8 @@ const Magentic = ({
       return (
         <Link 
           href={href}
+          target={target}
+          rel={rel}
           ref={magnet as React.RefObject<HTMLAnchorElement>} 
           {...sharedProps}
         >
