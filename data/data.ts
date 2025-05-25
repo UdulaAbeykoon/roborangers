@@ -6,6 +6,7 @@ export const links = {
   contact: "/contact",
   email: "mailto:RoboRangersCamp@gmail.com",
   phone: "tel:6476198189",
+  linkedin: "https://www.linkedin.com/company/roborangers",
 };
 
 export const campInfo = {
