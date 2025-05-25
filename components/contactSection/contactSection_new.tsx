@@ -9,9 +9,8 @@ export function ContactSection({}) {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-colorPrimary">Get In Touch</h2>
-            <p className="text-xl mb-8">
-              Have questions about our STEM summer camp? We're here to help! Reach out to us directly or visit our contact page for more.
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-colorPrimary">Get In Touch</h2>            <p className="text-xl mb-8">
+              Have questions about our STEM summer camp? We&apos;re here to help! Reach out to us directly or visit our contact page for more.
             </p>
             
             <div className="space-y-6 mb-8">

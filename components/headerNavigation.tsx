@@ -58,11 +58,10 @@ export function HeaderNavigation() {
         "-=1.2",
       );
     }
-    
-    return () => {
+      return () => {
       headerAnimation.current?.kill();
     };
-  }, []);
+  }, [ease]);
   useEffect(() => {
     if (typeof window !== 'undefined' && headerAnimation.current) {
       if (isMenuOpen) {

@@ -57,13 +57,11 @@ export function ImageSequence({
     };
 
     const sectionElement = sectionRef.current;
-    sectionElement.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
+    sectionElement.addEventListener("mousemove", handleMouseMove);    return () => {
       gsap.killTweensOf(airpods);
       sectionElement.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  }, [sectionRef]);
 
   // const { isActive } = useAppSelector((state) => state.splineReducer);
   return (

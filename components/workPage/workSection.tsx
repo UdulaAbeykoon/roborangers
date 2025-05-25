@@ -126,9 +126,9 @@ export function WorkSection({
       <div className="anime absolute bottom-10 flex w-full items-end justify-center gap-6">
         {Array(length)
           .fill(0)
-          .map((_, i) => {
-            return (
+          .map((_, i) => {            return (
               <div
+                key={i}
                 className={cn(
                   `h-4 w-1 bg-colorSecondary${color} rounded-full`,
                   ` ${i === index ? `h-10 bg-color${color}` : ""}`,

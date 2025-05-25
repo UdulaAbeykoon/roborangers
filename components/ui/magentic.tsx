@@ -85,13 +85,14 @@ const Magentic = ({
       }
 
       //magnetButton.style.transform = 'translate(' + (((( event.clientX - bounding.left)/(magnetButton.offsetWidth))) - 0.5) * strength + 'px,'+ (((( event.clientY - bounding.top)/(magnetButton.offsetHeight))) - 0.5) * strength + 'px)';
-    }
-
+    }    // Store the current value of magnet.current in a variable for the cleanup function
+    const currentMagnet = magnet.current;
+    
     return () => {
-      magnet.current?.removeEventListener("mousemove", handleMagnetMove);
-      magnet.current?.removeEventListener("mouseout", handleMagnetOut);
+      currentMagnet?.removeEventListener("mousemove", handleMagnetMove);
+      currentMagnet?.removeEventListener("mouseout", handleMagnetOut);
     };
-  }, []);
+  }, [strength]);
 
   function handleScramble(
     scrambleParams: {

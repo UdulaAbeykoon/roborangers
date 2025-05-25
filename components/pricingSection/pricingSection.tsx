@@ -53,7 +53,7 @@ export function PricingSection() {
           
           <div className="space-y-6">
             <div>
-              <h3 className="text-xl font-bold mb-2">What's included in the price?</h3>
+              <h3 className="text-xl font-bold mb-2">What&apos;s included in the price?</h3>
               <p>Each class includes all necessary materials, equipment usage, and expert instruction from our qualified STEM educators.</p>
             </div>
             <div>
