@@ -5,7 +5,8 @@ export const dM_Sans = DM_Sans({
   subsets: ["latin-ext"],
   display: "swap",
   variable: "--font-dm-sans",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "700"],
+  preload: true,
 });
 
 export const satoshi = localFont({
