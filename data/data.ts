@@ -1,4 +1,15 @@
-export const links = {
+export interface Links {
+  home: string;
+  programs: string;
+  pricing: string;
+  booking: string;
+  contact: string;
+  email: string;
+  phone: string;
+  linkedin: string;
+}
+
+export const links: Links = {
   home: "/",
   programs: "/programs",
   pricing: "/pricing",
