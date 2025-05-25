@@ -15,13 +15,14 @@ import { Footer } from "@/components/contactSection/footer";
 export default function WorkPage() {
   const [delay, setDelay] = useState(15);
   let timer: NodeJS.Timeout;
-  useEffect(() => {
-    if (delay !== 0) {
+  useEffect(() => {    if (delay !== 0) {
       timer = setTimeout(() => {
         setDelay(delay - 1);
       }, 1000);
     } else {
-      redirect(links.linkedin);
+      // Make sure the LinkedIn URL exists, otherwise go to home
+      const redirectUrl = links.linkedin || links.home;
+      redirect(redirectUrl);
     }
 
     return () => clearTimeout(timer);
