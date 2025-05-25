@@ -76,13 +76,11 @@ export default function BookingPage() {
                   <div className="space-y-2">
                     <Label htmlFor="phone">Phone Number</Label>
                     <Input id="phone" type="tel" required className="bg-colorLight/5 border-colorLight/20 text-colorLight" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="childName">Child's Name</Label>
+                  </div>                  <div className="space-y-2">
+                    <Label htmlFor="childName">Child&apos;s Name</Label>
                     <Input id="childName" required className="bg-colorLight/5 border-colorLight/20 text-colorLight" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="childAge">Child's Age</Label>
+                  </div>                  <div className="space-y-2">
+                    <Label htmlFor="childAge">Child&apos;s Age</Label>
                     <Input id="childAge" type="number" min="3" max="18" required className="bg-colorLight/5 border-colorLight/20 text-colorLight" />
                   </div>
                   <div className="space-y-2">
@@ -105,9 +103,8 @@ export default function BookingPage() {
           
           {step === 3 && (
             <div className="bg-colorLight/10 backdrop-blur-md rounded-xl p-8 shadow-xl text-center">
-              <h2 className="text-3xl font-bold mb-6">Booking Submitted!</h2>
-              <p className="text-xl mb-6">
-                Thank you for booking a session with RoboRangers! We've received your information and will contact you shortly to confirm your booking and schedule.
+              <h2 className="text-3xl font-bold mb-6">Booking Submitted!</h2>              <p className="text-xl mb-6">
+                Thank you for booking a session with RoboRangers! We&apos;ve received your information and will contact you shortly to confirm your booking and schedule.
               </p>
               <p className="text-lg mb-8">
                 Remember: Your first class is FREE!
