@@ -4,6 +4,7 @@ export interface Links {
   pricing: string;
   booking: string;
   contact: string;
+  work: string;
   email: string;
   phone: string;
   linkedin: string;
@@ -15,6 +16,7 @@ export const links: Links = {
   pricing: "/pricing",
   booking: "/booking",
   contact: "/contact",
+  work: "/work",
   email: "mailto:RoboRangersCamp@gmail.com",
   phone: "tel:6476198189",
   linkedin: "https://www.linkedin.com/company/roborangers",
