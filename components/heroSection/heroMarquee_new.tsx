@@ -48,7 +48,8 @@ export function HeroMarquee({}) {
 
     return () => {
       gsap.killTweensOf(".rollingText");
-    };  }, []);  return (
+    };  }, []);
+  return (
     <div className="wrapperRollingText anime pointer-events-none z-[-5] select-none rounded-3xl tracking-[-0.05em] mt-16">
       <div className="rollingText bg-gradient-to-r from-colorPrimary to-colorAccent bg-clip-text text-transparent opacity-30 md:!text-[180px]">
         - Robotics - Coding - 3D Printing - STEM - Fun&nbsp;

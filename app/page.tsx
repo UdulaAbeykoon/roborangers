@@ -1,20 +1,25 @@
 "use client";
-import { Main } from "@/components/main";
+import React from "react";
 import { Cursor } from "@/components/cursor";
-import FullpageProvider from "@/components/fullpageProvider";
 import { HeaderNavigation } from "@/components/headerNavigation";
+import { HeroSection } from "@/components/heroSection";
+import { ProgramsSection } from "@/components/programsSection";
+import { BookingSection } from "@/components/bookingSection";
+import { ContactSection } from "@/components/contactSection";
 
 import "./index.css";
 
-export default function HomePage({}) {
+export default function HomePage() {
   return (
     <>
       <Cursor />
-      {/* <Intro /> */}
       <HeaderNavigation />
-      <FullpageProvider>
-        <Main />
-      </FullpageProvider>
+      <main className="w-full">
+        <HeroSection />
+        <ProgramsSection />
+        <BookingSection />
+        <ContactSection />
+      </main>
     </>
   );
 }

@@ -5,6 +5,7 @@ import GoogleAnalytics from "@/app/GoogleAnalytics";
 import Script from "next/script";
 
 import "./globals.css";
+import "./fixOverflow.css";
 import StoreProvider from "@/redux/storeProvider";
 import { gsap } from "gsap";
 import { CustomEase } from "gsap/CustomEase";
@@ -22,15 +23,15 @@ const helvetica = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Vipul Kumar • Designer & Developer",
+  title: "RoboRangers • STEM Summer Camp",
+  description: "Join RoboRangers STEM Summer Camp! Learn robotics, coding, and 3D printing in a fun, engaging environment. First class FREE! Ages 8+",
 };
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {
-  return (
+}) {  return (
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
@@ -47,13 +48,11 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"
         ></meta>
-        <GoogleAnalytics />
       </head>
-
-      <body className={helvetica.className}>
+      <body className={dM_Sans.className}>
         <StoreProvider>{children}</StoreProvider>
+        <Script src="https://cdn.jsdelivr.net/gh/vipulkumar-dev/gsap@2024/ScrambleTextPlugin.min.js" />
       </body>
-      <Script src="https://cdn.jsdelivr.net/gh/vipulkumar-dev/gsap@2024/ScrambleTextPlugin.min.js" />
     </html>
   );
 }

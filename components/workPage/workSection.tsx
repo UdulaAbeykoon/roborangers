@@ -1,5 +1,5 @@
 import React from "react";
-import Magentic from "@/components/ui/magentic";
+import Magentic from "@/components/ui/magentic_fixed";
 import { Header } from "@/components/header";
 import { Bulge } from "../bulge";
 import { cn } from "@/lib/utils";

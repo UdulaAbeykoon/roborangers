@@ -229,7 +229,9 @@ textPath {
   white-space: nowrap;
   position: absolute;
   bottom: 5%;
-  /* width: 100vw; */
+  width: 100%;
+  overflow: hidden;
+  z-index: -10;
 
   --mask: linear-gradient(
     90deg,
@@ -247,6 +249,7 @@ textPath {
   font-weight: bold;
   font-size: var(--fontExtraBig);
   display: inline-block;
+  opacity: 0.3;
   /* padding-left: 10px; */
 }
 

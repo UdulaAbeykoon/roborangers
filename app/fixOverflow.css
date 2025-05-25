@@ -1,0 +1,22 @@
+/* Add this to fix horizontal overflow issues */
+html, body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+/* Prevent horizontal scrolling in all containers */
+* {
+  box-sizing: border-box;
+  max-width: 100vw;
+}
+
+/* Rolling text styling - positioned behind content with lower opacity */
+.wrapperRollingText {
+  z-index: -5 !important;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.rollingText {
+  opacity: 0.3 !important;
+}

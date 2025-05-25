@@ -7,7 +7,7 @@ import "../header.css";
 import FullpageProviderWork from "@/components/fullpageProviderWork";
 import { Header } from "@/components/header";
 import { HeaderNavigation } from "@/components/headerNavigation";
-import Magentic from "@/components/ui/magentic";
+import Magentic from "@/components/ui/magentic_fixed";
 import { redirect } from "next/navigation";
 import { links } from "@/data/data";
 import { Footer } from "@/components/contactSection/footer";

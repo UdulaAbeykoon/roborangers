@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import React from "react";
-import Magentic from "@/components/ui/magentic";
+import Magentic from "@/components/ui/magentic_fixed";
 export function FooterGroup({
   title,
   links,

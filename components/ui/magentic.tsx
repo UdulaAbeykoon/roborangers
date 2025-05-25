@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 
 import { cn, isDesktop } from "@/lib/utils";
 
-interface MagenticProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+interface MagenticProps {
   children: React.ReactNode;
   href?: string;
   className?: string;
@@ -11,6 +11,7 @@ interface MagenticProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   hoverUnderline?: boolean;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
+  onClick?: () => void;
   scrambleParams?:
     | {
         text: string;
@@ -22,18 +23,21 @@ interface MagenticProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
         chars?: string;
         speed?: number;
       }[];
+  as?: 'div' | 'a' | 'button'; // Allow specifying the element type
 }
 const Magentic = ({
   children,
   className,
   onMouseEnter,
   onMouseLeave,
+  onClick,
   scrambleParams,
   hoverUnderline = false,
   strength = 100,
+  as = 'a',
   ...rest
 }: MagenticProps) => {
-  const magnet = useRef<HTMLAnchorElement>(null);
+  const magnet = useRef<HTMLElement>(null);
 
   useEffect(() => {
     if (magnet.current === null) {

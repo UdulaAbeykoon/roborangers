@@ -44,33 +44,38 @@ export function ContactSection({}) {
               <Link href="/contact">Send Us a Message</Link>
             </Button>
           </div>
-            <div className="bg-colorLight/10 backdrop-blur-md rounded-xl p-8 shadow-xl">
-            <h3 className="text-2xl font-bold mb-4">Visit Us</h3>
-            <p className="mb-4 text-colorSecondaryLight">
-              375 Bamburgh Cir C107, Scarborough, ON M1W 3Y1
+          
+          <div className="bg-colorLight/10 backdrop-blur-md rounded-xl p-8 shadow-xl">
+            <h3 className="text-2xl font-bold mb-6">Newsletter Signup</h3>
+            <p className="mb-6">
+              Subscribe to our newsletter to stay updated on camp sessions, special events, and early registration opportunities.
             </p>
             
-            <div className="w-full h-[400px] rounded-lg overflow-hidden">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.12345678901!2d-79.31234567891234!3d43.789123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d3f7a5e5e5e5%3A0x8d8d8d8d8d8d8d8d!2s375%20Bamburgh%20Cir%20C107%2C%20Scarborough%2C%20ON%20M1W%203Y1!5e0!3m2!1sen!2sca!4v1653123456789!5m2!1sen!2sca"
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen={false} 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                className="rounded-lg"
-                title="RoboRangers Camp Location"
-              ></iframe>
-            </div>
-            
-            <div className="mt-4">
-              <Button asChild className="w-full bg-colorPrimary hover:bg-colorPrimary/80 text-white">
-                <a href="https://goo.gl/maps/LVsKirthcT7V2vKWA" target="_blank" rel="noopener noreferrer">
-                  Open in Google Maps
-                </a>
+            <form className="space-y-4">
+              <div>
+                <label htmlFor="name" className="block mb-2">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Your name"
+                  className="w-full p-3 rounded-lg bg-colorLight/5 border border-colorLight/20 text-colorLight"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="email" className="block mb-2">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Your email address"
+                  className="w-full p-3 rounded-lg bg-colorLight/5 border border-colorLight/20 text-colorLight"
+                />
+              </div>
+              
+              <Button type="submit" className="w-full bg-colorPrimary hover:bg-colorPrimary/80 text-white">
+                Subscribe
               </Button>
-            </div>
+            </form>
           </div>
         </div>
         

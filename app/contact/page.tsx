@@ -20,7 +20,8 @@ import { Resend } from "resend";
 import { sendEmail } from "@/actions/sendEmail";
 import { Header } from "@/components/header";
 import { HeaderNavigation } from "@/components/headerNavigation";
-import { Footer } from "@/components/contactSection/footer";
+import { Cursor } from "@/components/cursor";
+import { campInfo } from "@/data/data";
 import { useState } from "react";
 
 const formSchema = z.object({
@@ -154,8 +155,7 @@ export default function ProfileForm() {
                   <FormMessage />
                 </FormItem>
               )}
-            />
-            <Button
+            />            <Button
               type="submit"
               className="group !mb-[2em] h-auto w-auto rounded-full bg-colorLight px-[2em] py-[1em] text-colorDark"
               disabled={status === "Loading"}
@@ -164,7 +164,6 @@ export default function ProfileForm() {
             </Button>
           </form>
         </Form>
-        <Footer className="bottom-0 left-0"></Footer>
       </main>
     </>
   );

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Magentic from "../ui/magentic";
+import Magentic from "../ui/magentic_fixed";
 import { gsap } from "gsap";
 import { AboutMarquee } from "./aboutMarquee";
 import { links } from "@/data/data";

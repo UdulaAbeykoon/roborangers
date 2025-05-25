@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-import Magentic from "../ui/magentic";
+import Magentic from "../ui/magentic_fixed";
 import { gsap } from "gsap";
 import { CustomEase } from "gsap/CustomEase";
 

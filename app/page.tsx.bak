@@ -1,0 +1,167 @@
+"use client";
+import { Cursor } from "@/components/cursor";
+import { HeaderNavigation } from "@/components/headerNavigation";
+import { Main } from "@/components/main";
+
+import "./index.css";
+
+export default function HomePage() {
+  return (
+    <>
+      <Cursor />
+      <HeaderNavigation />
+      <Main />
+    </>
+  );
+}
+                <Link href="/programs">Explore Programs</Link>
+              </Button>
+            </div>
+            <div className="mt-8 p-4 bg-colorLight/10 backdrop-blur-sm rounded-lg inline-block">
+              <p className="text-lg font-bold text-colorPrimary">FIRST CLASS FREE!</p>
+            </div>
+          </div>
+          <div className="md:w-1/2 flex justify-center">
+            <div className="relative w-full max-w-md aspect-square bg-colorLight/10 rounded-full overflow-hidden">
+              {/* This would ideally be an actual image */}
+              <div className="absolute inset-0 flex items-center justify-center text-9xl">
+                🤖
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Programs Overview */}
+      <section className="py-20 px-paddingX bg-colorLight text-colorSecondary">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Our STEM Programs</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {programs.map((program, index) => (
+              <div key={index} className="bg-white rounded-xl p-6 shadow-lg transition-all hover:transform hover:scale-105">
+                <div className="h-16 w-16 bg-colorPrimary rounded-full flex items-center justify-center mb-4">
+                  <span className="text-3xl text-white">
+                    {program.icon === "robot" && "🤖"}
+                    {program.icon === "tool" && "🔧"}
+                    {program.icon === "code" && "💻"}
+                    {program.icon === "coffee" && "☕"}
+                    {program.icon === "printer" && "🖨️"}
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold mb-2">{program.title}</h3>
+                <p className="text-colorSecondaryHalfDark mb-4 text-sm">{program.description}</p>
+                <div className="flex flex-wrap gap-2">
+                  {program.ageGroups.map((age, idx) => (
+                    <span key={idx} className="bg-colorSecondaryLight/20 text-colorSecondary px-3 py-1 rounded-full text-sm">
+                      Ages {age}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Button asChild className="bg-colorPrimary hover:bg-colorPrimary/80 text-white text-lg py-6 px-8 rounded-full">
+              <Link href="/programs">View All Programs</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+      
+      {/* Why Choose Us */}
+      <section className="py-20 px-paddingX bg-gradient-to-b from-colorSecondary to-colorSecondaryDark text-colorLight">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Why Choose Robot Rangers?</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-colorLight/10 backdrop-blur-md rounded-xl p-8 shadow-xl">
+              <div className="h-16 w-16 bg-colorPrimary rounded-full flex items-center justify-center mb-4">
+                <span className="text-3xl text-white">🔬</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-3">Hands-On Learning</h3>
+              <p>
+                Our project-based curriculum ensures students learn by doing, creating real working projects they can proudly take home and demonstrate.
+              </p>
+            </div>
+            
+            <div className="bg-colorLight/10 backdrop-blur-md rounded-xl p-8 shadow-xl">
+              <div className="h-16 w-16 bg-colorPrimary rounded-full flex items-center justify-center mb-4">
+                <span className="text-3xl text-white">👩‍🏫</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-3">Expert Instructors</h3>
+              <p>
+                Our teachers are passionate STEM professionals with experience in both technology and education, providing the perfect balance of knowledge and mentorship.
+              </p>
+            </div>
+            
+            <div className="bg-colorLight/10 backdrop-blur-md rounded-xl p-8 shadow-xl">
+              <div className="h-16 w-16 bg-colorPrimary rounded-full flex items-center justify-center mb-4">
+                <span className="text-3xl text-white">👥</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-3">Small Class Sizes</h3>
+              <p>
+                With limited spots per session, we ensure each child receives personalized attention and guidance throughout their learning journey.
+              </p>
+            </div>
+            
+            <div className="bg-colorLight/10 backdrop-blur-md rounded-xl p-8 shadow-xl">
+              <div className="h-16 w-16 bg-colorPrimary rounded-full flex items-center justify-center mb-4">
+                <span className="text-3xl text-white">🌟</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-3">Fun & Engaging</h3>
+              <p>
+                We believe learning should be exciting! Our curriculum blends education with play, keeping students motivated and enthusiastic about STEM.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Pricing & CTA */}
+      <section className="py-20 px-paddingX bg-colorLight text-colorSecondary">
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-white rounded-xl p-8 shadow-xl text-center mb-12">
+            <h2 className="text-4xl font-bold mb-6">Ready to Join the Fun?</h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Spaces fill up quickly for our summer sessions. Secure your child's spot today and remember - the first class is completely FREE!
+            </p>
+            
+            <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
+              <div className="bg-colorPrimary/10 rounded-lg p-6 text-center">
+                <p className="text-lg font-bold">Price</p>
+                <p className="text-3xl font-bold">${campInfo.price}</p>
+              </div>
+              <div className="bg-colorPrimary/10 rounded-lg p-6 text-center">
+                <p className="text-lg font-bold">Schedule</p>
+                <p className="text-xl">{campInfo.schedule}</p>
+              </div>
+              <div className="bg-colorPrimary/10 rounded-lg p-6 text-center">
+                <p className="text-lg font-bold">Ages</p>
+                <p className="text-xl">{campInfo.ages}</p>
+              </div>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button asChild className="bg-colorPrimary hover:bg-colorPrimary/80 text-white text-lg py-6 px-8 rounded-full">
+                <Link href="/booking">Book Now</Link>
+              </Button>
+              <Button asChild className="bg-colorSecondary hover:bg-colorSecondary/80 text-white text-lg py-6 px-8 rounded-full">
+                <Link href="/pricing">View Pricing Details</Link>
+              </Button>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <h3 className="text-2xl font-bold mb-4">Have Questions?</h3>
+            <p className="mb-6">We're here to help! Reach out to us for more information.</p>
+            <Button asChild className="bg-colorSecondary hover:bg-colorSecondary/80 text-white">
+              <Link href="/contact">Contact Us</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

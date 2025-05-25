@@ -1,12 +1,11 @@
-import React, { use, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { CustomEase } from "gsap/CustomEase";
 import { Header } from "./header";
 import { useAppSelector } from "@/hooks/reduxHooks";
 import { Footer } from "./contactSection/footer";
-import Magentic from "./ui/magentic";
+import Magentic from "./ui/magentic_fixed";
 import { isDesktop } from "@/lib/utils";
-import { link } from "fs";
 import { links } from "@/data/data";
 export function HeaderNavigation() {
   const { isMenuOpen, color } = useAppSelector((state) => state.menuReducer);
@@ -70,32 +69,29 @@ export function HeaderNavigation() {
     } else {
       headerAnimation.current?.reverse();
     }
-  }, [isMenuOpen]);
-
-  const headerData = [
+  }, [isMenuOpen]);  const headerData = [
     {
       name: "Home",
       href: links.home,
     },
-
     {
-      name: "Work",
-      href: links.work,
+      name: "Programs",
+      href: links.programs,
+    },
+    {
+      name: "Book Now",
+      href: links.booking,
     },
     {
       name: "Contact",
-      href: links.email,
-    },
-    {
-      name: "Twitter/X",
-      href: links.twitter,
+      href: links.contact,
     },
   ];
   return (
     <>
       <div
         id="headerNavigation"
-        className="fixed left-0 top-0 z-[6000] hidden h-full w-full -translate-y-full flex-col items-center justify-center p-paddingX"
+        className="fixed left-0 top-0 z-[6000] hidden h-full w-full -translate-y-full flex-col items-center justify-center p-paddingX bg-gradient-to-b from-colorSecondary to-colorSecondaryDark text-colorLight"
       >
         <Header
           mode="cross"
@@ -104,8 +100,7 @@ export function HeaderNavigation() {
         />
         <nav>
           <ul className="mask flex flex-col items-center justify-center px-8 py-[10vh]">
-            {headerData.map((data) => (
-              <li className="headerAnimate" key={data.name}>
+            {headerData.map((data) => (              <li className="headerAnimate" key={data.name}>
                 <Magentic
                   className={`text-[clamp(32px,_3.3vw_+_32px,_88px)] font-bold text-color${
                     color == "Light" ? "Dark" : "Light"
