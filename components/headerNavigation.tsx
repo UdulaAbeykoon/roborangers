@@ -44,8 +44,7 @@ export function HeaderNavigation() {
           ease,
         },
         "-=0.9",
-      )
-      .fromTo(
+      )      .fromTo(
         ".headerAnimate",
         {
           y: "-20vh",
@@ -57,20 +56,23 @@ export function HeaderNavigation() {
           ease,
         },
         "-=1.2",
-      );    return () => {
+      );
+    }
+    
+    return () => {
       headerAnimation.current?.kill();
     };
   }, []);
-
   useEffect(() => {
     if (typeof window !== 'undefined' && headerAnimation.current) {
       if (isMenuOpen) {
         headerAnimation.current.play();
       } else {
         headerAnimation.current.reverse();
-      }
-    }
-  }, [isMenuOpen]);const headerData = [
+      }    }
+  }, [isMenuOpen]);
+  
+  const headerData = [
     {
       name: "Home",
       href: links.home,

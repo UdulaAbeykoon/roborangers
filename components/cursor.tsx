@@ -2,6 +2,11 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 export function Cursor() {
   useEffect(() => {
+    // Make sure we're in the browser environment
+    if (typeof window === 'undefined') {
+      return;
+    }
+    
     // let xTo = gsap.quickTo(".cursor", "x", {
     //     duration: 0.4,
     //     ease: "power3",

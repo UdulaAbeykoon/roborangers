@@ -9,7 +9,11 @@ import "./fixOverflow.css";
 import StoreProvider from "@/redux/storeProvider";
 import { gsap } from "gsap";
 import { CustomEase } from "gsap/CustomEase";
-gsap.registerPlugin(CustomEase);
+
+// Only register GSAP plugins on the client side
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(CustomEase);
+}
 
 const dM_Sans = DM_Sans({ subsets: ["latin-ext"] });
 const satoshi = localFont({
